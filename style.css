@@ -31,3 +31,8 @@ li{
     border-bottom: 2px solid gray;
     padding: 8px 0;
 }
+
+button{
+    padding: 6px 10px;
+    cursor: pointer;
+}
