@@ -29,3 +29,38 @@ if (name && email && phone) {
 }
 });
 
+//display function
+function displayContacts(){
+    contactList.innerHTML=" ";
+    contacts.forEach((contact,index)=>{
+        const li= document.createElement('li');
+
+        li.innerHTML=`
+        <span>${contact.name}</span> <br>
+        <span>${contact.email}</span> <br>
+        <span>${contact.phone}</span>
+        
+        ///button for edit and delete
+        <button onclick="editContact(${index})">Edit</button>
+            <button onclick="deleteContact(${index})">Delete</button>
+    `;
+    contactList.appendChild(li)
+        });
+}
+
+//edit form function and display update
+function editContact(index){
+    const{name,email ,phone}=[index];
+    nameInput.value=name;
+    emailInput.value=email;
+    phoneInput.value=phone;
+
+    contacts.splice(index,1);
+    displayContacts();
+}
+
+// delete contact and remove then display update
+function deleteContact(index){
+    contacts.splice(index,1);
+    displayContacts();
+}
