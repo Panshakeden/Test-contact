@@ -12,4 +12,7 @@ contactForm.addEventListener('submit',(e)=>{
     e.preventDefault();
 
 // getting contact value
+const name = nameInput.value;
+const email = emailInput.value;
+const phone = phoneInput.value;
 })
