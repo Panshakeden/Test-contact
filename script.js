@@ -15,4 +15,17 @@ contactForm.addEventListener('submit',(e)=>{
 const name = nameInput.value;
 const email = emailInput.value;
 const phone = phoneInput.value;
-})
+
+// condition for validation
+if (name && email && phone) {
+    const newContact={name,email,phone}
+    contacts.push(newContact);
+   //creating a function to handle display of contact
+   displayContacts();
+    contactForm.reset();
+} else {
+    alert('Please kindly add all fields')
+    
+}
+});
+
