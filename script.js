@@ -48,3 +48,13 @@ function displayContacts(){
         });
 }
 
+//edit form function
+function editContact(index){
+    const{name,email ,phone}=[index];
+    nameInput.value=name;
+    emailInput.value=email;
+    phoneInput.value=phone;
+
+    contacts.splice(index,1);
+    displayContacts();
+}
